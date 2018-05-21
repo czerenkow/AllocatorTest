@@ -10,3 +10,7 @@ set (CMAKE_CXX_FLAGS_RELEASE "-Wall -O2")
 project (allocator)
 add_executable(allocator main.cc)
 
+add_subdirectory(ext/memory)
+target_link_libraries(allocator PUBLIC foonathan_memory)
+
+
